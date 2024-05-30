@@ -71,7 +71,7 @@ El sistema consiste en:
 
    ii. **Decido** aprovechar servicios web legítimos, como plataformas de blogs, almacenamiento en la nube, o redes sociales, para enmascarar el tráfico C2 y evitar la detección. [Tecnica T1102](https://attack.mitre.org/techniques/T1102)
 
-7. Actions on Objectives
+7. **Actions on Objectives**
 
    i. Recolecto y exfiltro datos críticos sobre yacimientos y fugas de petróleo para utilizar esta información con fines de extorsión. Utilizo el canal de C2 para transferir los datos exfiltrados de vuelta al servidor de comando y control. [Tecnica T1041](https://attack.mitre.org/techniques/T1041)
 
