@@ -21,58 +21,45 @@ El sistema consiste en:
 
 1. **Reconnaissance:**
 
-   i. Identifico personas con acceso a la plataforma de uali - [Tecnica T1589](https://attack.mitre.org/techniques/T1589/)
+   i. **Identifico personas con acceso a la plataforma de uali** - [Tecnica T1589: Gather Victim Identity Information](https://attack.mitre.org/techniques/T1589/)
 
-   ii. Identifico la topología del sistema. - [Tecnica T1590.004](https://attack.mitre.org/techniques/T1590/004)
+   ii. **Identifico la topología del sistema.** - [Tecnica T1590.004: Network Topology](https://attack.mitre.org/techniques/T1590/004)
 
-   iii. Identifico IP de la API (Backend) - [Tecnica T1590.005](https://attack.mitre.org/techniques/T1590/005)
+   iii. **Identifico IP de la API (Backend)** - [Tecnica T1590.005: IP Addresses](https://attack.mitre.org/techniques/T1590/005)
 
-   iv. Identifico medidas de seguridad. - [Tecnica 1590.006](https://attack.mitre.org/techniques/T1590/006)
+   iv. **Identifico medidas de seguridad.** - [Tecnica 1590.006: Defensive Systems](https://attack.mitre.org/techniques/T1590/006)
 
-   v. Identifico informacion del hardware utilizado. - [Tecnica 1592.001](https://attack.mitre.org/techniques/T1592/001)
-
-   vi. Identifico las tecnologias utilizadas por el software a traves de active scanning. - [Tecnica T1595](https://attack.mitre.org/techniques/T1595/)
+   vi. **Identifico las tecnologias utilizadas por el software a traves de active scanning.** - [Tecnica T1595: Active Scanning](https://attack.mitre.org/techniques/T1595/)
 
 2. **Weaponization:**
 
-   i. Crear o adquirir exploits que aprovechen las vulnerabilidades descubiertas en el software, hardware o red de la plataforma de uali. - [Tecnica 1608.001](https://attack.mitre.org/techniques/T1608/001)
+i. **Desarrollo de un Correo Electrónico de Phishing Engañoso** - Puedo crear un correo electrónico falso persuasivo con alertas de seguridad, adaptado específicamente para engañar a los destinatarios y obtener información confidencial, como credenciales de usuario. - [Técnica T1598.001 - Phishing](https://attack.mitre.org/techniques/T1598/001)
 
-   ii. Crear payloads (malware) que se integren con los exploits desarrollados, listos para ser entregados al sistema objetivo. - [Tecnica 1608.002](https://attack.mitre.org/techniques/T1608/002)
-
-   iii. Buscar y utilizar exploits ya conocidos y disponibles públicamente que coincidan con las vulnerabilidades identificadas. - [Tecnica T1587.001](https://attack.mitre.org/techniques/T1587/001)
-
-   iv. Diseñar herramientas que faciliten el control de los sistemas comprometidos para extraer datos sensibles sin ser detectados. - [Tecnica 1608.003](https://attack.mitre.org/techniques/T1608/003)
-
-   v. Preparar métodos efectivos para la entrega de los payloads, como correos de phishing dirigidos a empleados con acceso a información sensible o exploits que se activen mediante acciones del usuario. - [Tecnica 1204](https://attack.mitre.org/techniques/T1204).
-
-   vi. Crear scripts o herramientas que permitan la extracción silenciosa de datos sensibles sobre yacimientos y fugas de petróleo una vez que el sistema ha sido comprometido. - [Tecnica 1071.001](https://attack.mitre.org/techniques/T1071/001)
+ii. **Creación de una Página Web Falsa para Phishing** - Decido desarrollar una página web falsa que imite fielmente el aspecto y la funcionalidad de un sitio web legítimo de la empresa objetivo. Esta página se utilizará para capturar las credenciales de usuario proporcionadas por las víctimas que hayan sido dirigidas a ella a través del correo electrónico de phishing. - [Técnica T1598.001 - Phishing](https://attack.mitre.org/techniques/T1598/001).
 
 3. **Delivery**
 
-   i. Utilizar correos electrónicos de phishing personalizados para engañar a empleados específicos con acceso a información sensible. - [Tecnica 1566.001](https://attack.mitre.org/techniques/T1566/001)
-
-   ii. Crear aplicaciones o actualizaciones falsas que parezcan legítimas pero que contengan el payload malicioso, engañando a los usuarios para que las descarguen e instalen. - [Tecnica 1072](https://attack.mitre.org/techniques/1072)
+   i. **Envío del Correo Electrónico de Phishing** - Decido crear un correo electrónico falso persuasivo con alertas de seguridad, adaptado específicamente para engañar a los destinatarios y que entren a la pagina web falsa a traves del link de ese mail y se logueen con sus credenciales de la plataforma original. - [Técnica T1566.003 - Spearphishing Link](https://attack.mitre.org/techniques/T1566/001)
 
 4. **Exploit**
 
-   i. Cuando el objetivo hace clic en un enlace malicioso en un correo de phishing o sitio web comprometido, se ejecuta el código que explota una vulnerabilidad del navegador o plugin. - [Tecnica 1204.001](https://attack.mitre.org/techniques/T1204/001)
-
-   ii. Cuando los usuarios instalan una aplicación o actualización falsa, se ejecuta el payload que explota vulnerabilidades en el sistema. - [Tecnica 1072](https://attack.mitre.org/techniques/T1072)
+   i. **Explotación de Credenciales de Usuario** - Decido aprovechar las credenciales de usuario obtenidas en la pagina de phishing para acceder a la plataforma con los accesos requeridos. - [Técnica T1078 - Valid Account](https://attack.mitre.org/techniques/T1078/)
 
 5. **Installation**
 
-   i. **Puedo** instalar el payload en el sistema objetivo para asegurar un acceso continuo. - [Tecnica T1105](https://attack.mitre.org/techniques/T1105)
+   i. **Puedo** elevar mis privilegios y obtener un mayor control. - [Explotación para Escalada de Privilegios](https://attack.mitre.org/techniques/T1068/)
 
-   ii. **Decido** Instalar backdoors para asegurar el acceso persistente y permitir el retorno al sistema comprometido sin necesidad de re-explotar las vulnerabilidades. - [Tecnica T1204.002](https://attack.mitre.org/techniques/T1204/002)
+   ii. **Puedo** crear nuevos usuarios en el sistema comprometido con privilegios adecuados para mantener el acceso persistente.
+   [Técnica T1136 - Create Account](https://attack.mitre.org/techniques/T1136/)
+
+   iii. **Decido** guardar las credenciales obtenidas y aprovechar la manipulación de cuentas para obtener credenciales adicionales en la nube, lo que me permite mantener el acceso incluso si las credenciales originales son revocadas o cambiadas. [Técnica T1098 - Additional Cloud Credentials](https://attack.mitre.org/techniques/T1098/001/)
 
 6. **Command & Control**
 
-   i. **Puedo** utilizar protocolos de capa de aplicación como HTTP o HTTPS para establecer un canal de comunicación seguro y oculto entre el sistema comprometido y el servidor de comando y control. - [Tecnica T1071](https://attack.mitre.org/techniques/T1071)
+   i. **Puedo** configurar un servidor proxy para enrutar el tráfico de comando y control a través de él, ocultando la ubicación real del servidor de comando y control y dificultando la detección. - [Técnica T1090 - Proxy](https://attack.mitre.org/techniques/T1090/)
 
-   ii. **Decido** aprovechar servicios web legítimos, como plataformas de blogs, almacenamiento en la nube, o redes sociales, para enmascarar el tráfico C2 y evitar la detección. [Tecnica T1102](https://attack.mitre.org/techniques/T1102)
+   ii. **Decido** desarrollar un proceso que combine los datos sensibles con los datos basura para dificultar la deteccion. - [Técnica T1565/001 Manipulación de Datos: Datos Basura](https://attack.mitre.org/techniques/T1565/001)
 
 7. **Actions on Objectives**
 
-   i. Recolecto y exfiltro datos críticos sobre yacimientos y fugas de petróleo para utilizar esta información con fines de extorsión. Utilizo el canal de C2 para transferir los datos exfiltrados de vuelta al servidor de comando y control. [Tecnica T1041](https://attack.mitre.org/techniques/T1041)
-
-   ii. Intercepto y capturo datos en tránsito dentro de la red para obtener información crítica sobre la empresa objetivo. Utilizo herramientas de sniffing de red para capturar tráfico de red y extraer datos sensibles. - [Tecnica T1040](https://attack.mitre.org/techniques/T1040)
+   i. Recolecto y exfiltro datos críticos sobre yacimientos y fugas de petróleo para utilizar esta información con fines de extorsión. - [Técnica T1567 - Exfiltration Over Web Service](https://attack.mitre.org/techniques/T1567/)
