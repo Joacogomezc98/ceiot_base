@@ -43,7 +43,7 @@ ii. **Creación de una Página Web Falsa para Phishing** - Decido desarrollar un
 
 4. **Exploit**
 
-   i. **Explotación de Credenciales de Usuario** - Decido aprovechar las credenciales de usuario obtenidas en la pagina de phishing para acceder a la plataforma con los accesos requeridos. - [Técnica T1078 - Valid Account](https://attack.mitre.org/techniques/T1078/)
+   i. **Explotación de Credenciales de Usuario** - El usuario ingresa a la pagina web falsa y se registra con sus credenciales, estas credenciales se guardan en mi base de datos - [Técnica T1078 - Valid Account](https://attack.mitre.org/techniques/T1078/)
 
 5. **Installation**
 

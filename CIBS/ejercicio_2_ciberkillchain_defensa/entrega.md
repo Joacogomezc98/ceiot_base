@@ -26,7 +26,7 @@ Para cada etapa elegir una sola defensa, la más importante, considerar recursos
 
 4. **Exploit:**
 
-   - **Defensa:** Implementar autenticación multifactor (MFA) en la plataforma para agregar una capa adicional de seguridad en el acceso. Esto dificultará que el atacante utilice credenciales obtenidas de manera fraudulenta para acceder a la plataforma. ([Mitigación M1032: Multi-factor Authentication](https://attack.mitre.org/mitigations/M1032/)
+   - **Defensa:** Capacitar a los empleados para que reconozcan y eviten sitios web de phishing. La formación regular puede ayudar a los usuarios a identificar tácticas de ingeniería social. ([Mitigación M1017: User Training](https://attack.mitre.org/mitigations/M1017/)
 
 5. **Delivery:**
 
